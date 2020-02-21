@@ -49,19 +49,19 @@ xq
 	;
 
 forClause
-	: 'for' Var 'in' xq (',' Var 'in' xq)*	# forXQ
+	: 'for' Var 'in' xq (',' Var 'in' xq)*
 	;
 	
 letClause
-	: 'let' Var ':=' xq (',' Var ':=' xq)*	# letXQ
+	: 'let' Var ':=' xq (',' Var ':=' xq)*
 	;
 	
 whereClause
-	: 'where' cond					# whereCond
+	: 'where' cond
 	;
 
 returnClause
-	: 'return' xq					# returnXQ
+	: 'return' xq
 	;
 
 cond

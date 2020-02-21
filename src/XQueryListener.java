@@ -377,53 +377,45 @@ public interface XQueryListener extends ParseTreeListener {
 	 */
 	void exitXqComma(XQueryParser.XqCommaContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code forXQ}
-	 * labeled alternative in {@link XQueryParser#forClause}.
+	 * Enter a parse tree produced by {@link XQueryParser#forClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterForXQ(XQueryParser.ForXQContext ctx);
+	void enterForClause(XQueryParser.ForClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code forXQ}
-	 * labeled alternative in {@link XQueryParser#forClause}.
+	 * Exit a parse tree produced by {@link XQueryParser#forClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitForXQ(XQueryParser.ForXQContext ctx);
+	void exitForClause(XQueryParser.ForClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code letXQ}
-	 * labeled alternative in {@link XQueryParser#letClause}.
+	 * Enter a parse tree produced by {@link XQueryParser#letClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterLetXQ(XQueryParser.LetXQContext ctx);
+	void enterLetClause(XQueryParser.LetClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code letXQ}
-	 * labeled alternative in {@link XQueryParser#letClause}.
+	 * Exit a parse tree produced by {@link XQueryParser#letClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitLetXQ(XQueryParser.LetXQContext ctx);
+	void exitLetClause(XQueryParser.LetClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code whereCond}
-	 * labeled alternative in {@link XQueryParser#whereClause}.
+	 * Enter a parse tree produced by {@link XQueryParser#whereClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterWhereCond(XQueryParser.WhereCondContext ctx);
+	void enterWhereClause(XQueryParser.WhereClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code whereCond}
-	 * labeled alternative in {@link XQueryParser#whereClause}.
+	 * Exit a parse tree produced by {@link XQueryParser#whereClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitWhereCond(XQueryParser.WhereCondContext ctx);
+	void exitWhereClause(XQueryParser.WhereClauseContext ctx);
 	/**
-	 * Enter a parse tree produced by the {@code returnXQ}
-	 * labeled alternative in {@link XQueryParser#returnClause}.
+	 * Enter a parse tree produced by {@link XQueryParser#returnClause}.
 	 * @param ctx the parse tree
 	 */
-	void enterReturnXQ(XQueryParser.ReturnXQContext ctx);
+	void enterReturnClause(XQueryParser.ReturnClauseContext ctx);
 	/**
-	 * Exit a parse tree produced by the {@code returnXQ}
-	 * labeled alternative in {@link XQueryParser#returnClause}.
+	 * Exit a parse tree produced by {@link XQueryParser#returnClause}.
 	 * @param ctx the parse tree
 	 */
-	void exitReturnXQ(XQueryParser.ReturnXQContext ctx);
+	void exitReturnClause(XQueryParser.ReturnClauseContext ctx);
 	/**
 	 * Enter a parse tree produced by the {@code condEmpty}
 	 * labeled alternative in {@link XQueryParser#cond}.

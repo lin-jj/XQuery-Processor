@@ -387,49 +387,49 @@ public class XQueryBaseListener implements XQueryListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterForXQ(XQueryParser.ForXQContext ctx) { }
+	@Override public void enterForClause(XQueryParser.ForClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitForXQ(XQueryParser.ForXQContext ctx) { }
+	@Override public void exitForClause(XQueryParser.ForClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterLetXQ(XQueryParser.LetXQContext ctx) { }
+	@Override public void enterLetClause(XQueryParser.LetClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitLetXQ(XQueryParser.LetXQContext ctx) { }
+	@Override public void exitLetClause(XQueryParser.LetClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterWhereCond(XQueryParser.WhereCondContext ctx) { }
+	@Override public void enterWhereClause(XQueryParser.WhereClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitWhereCond(XQueryParser.WhereCondContext ctx) { }
+	@Override public void exitWhereClause(XQueryParser.WhereClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterReturnXQ(XQueryParser.ReturnXQContext ctx) { }
+	@Override public void enterReturnClause(XQueryParser.ReturnClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitReturnXQ(XQueryParser.ReturnXQContext ctx) { }
+	@Override public void exitReturnClause(XQueryParser.ReturnClauseContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

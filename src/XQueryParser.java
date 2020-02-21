@@ -1411,17 +1411,6 @@ public class XQueryParser extends Parser {
 	}
 
 	public static class ForClauseContext extends ParserRuleContext {
-		public ForClauseContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_forClause; }
-	 
-		public ForClauseContext() { }
-		public void copyFrom(ForClauseContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class ForXQContext extends ForClauseContext {
 		public List<TerminalNode> Var() { return getTokens(XQueryParser.Var); }
 		public TerminalNode Var(int i) {
 			return getToken(XQueryParser.Var, i);
@@ -1432,18 +1421,21 @@ public class XQueryParser extends Parser {
 		public XqContext xq(int i) {
 			return getRuleContext(XqContext.class,i);
 		}
-		public ForXQContext(ForClauseContext ctx) { copyFrom(ctx); }
+		public ForClauseContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_forClause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterForXQ(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterForClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitForXQ(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitForClause(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitForXQ(this);
+			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitForClause(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1453,7 +1445,6 @@ public class XQueryParser extends Parser {
 		enterRule(_localctx, 10, RULE_forClause);
 		int _la;
 		try {
-			_localctx = new ForXQContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(162);
@@ -1498,17 +1489,6 @@ public class XQueryParser extends Parser {
 	}
 
 	public static class LetClauseContext extends ParserRuleContext {
-		public LetClauseContext(ParserRuleContext parent, int invokingState) {
-			super(parent, invokingState);
-		}
-		@Override public int getRuleIndex() { return RULE_letClause; }
-	 
-		public LetClauseContext() { }
-		public void copyFrom(LetClauseContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class LetXQContext extends LetClauseContext {
 		public List<TerminalNode> Var() { return getTokens(XQueryParser.Var); }
 		public TerminalNode Var(int i) {
 			return getToken(XQueryParser.Var, i);
@@ -1519,18 +1499,21 @@ public class XQueryParser extends Parser {
 		public XqContext xq(int i) {
 			return getRuleContext(XqContext.class,i);
 		}
-		public LetXQContext(LetClauseContext ctx) { copyFrom(ctx); }
+		public LetClauseContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_letClause; }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterLetXQ(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterLetClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitLetXQ(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitLetClause(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitLetXQ(this);
+			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitLetClause(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1540,7 +1523,6 @@ public class XQueryParser extends Parser {
 		enterRule(_localctx, 12, RULE_letClause);
 		int _la;
 		try {
-			_localctx = new LetXQContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(175);
@@ -1585,32 +1567,24 @@ public class XQueryParser extends Parser {
 	}
 
 	public static class WhereClauseContext extends ParserRuleContext {
+		public CondContext cond() {
+			return getRuleContext(CondContext.class,0);
+		}
 		public WhereClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_whereClause; }
-	 
-		public WhereClauseContext() { }
-		public void copyFrom(WhereClauseContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class WhereCondContext extends WhereClauseContext {
-		public CondContext cond() {
-			return getRuleContext(CondContext.class,0);
-		}
-		public WhereCondContext(WhereClauseContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterWhereCond(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterWhereClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitWhereCond(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitWhereClause(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitWhereCond(this);
+			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitWhereClause(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1619,7 +1593,6 @@ public class XQueryParser extends Parser {
 		WhereClauseContext _localctx = new WhereClauseContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_whereClause);
 		try {
-			_localctx = new WhereCondContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(188);
@@ -1640,32 +1613,24 @@ public class XQueryParser extends Parser {
 	}
 
 	public static class ReturnClauseContext extends ParserRuleContext {
+		public XqContext xq() {
+			return getRuleContext(XqContext.class,0);
+		}
 		public ReturnClauseContext(ParserRuleContext parent, int invokingState) {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_returnClause; }
-	 
-		public ReturnClauseContext() { }
-		public void copyFrom(ReturnClauseContext ctx) {
-			super.copyFrom(ctx);
-		}
-	}
-	public static class ReturnXQContext extends ReturnClauseContext {
-		public XqContext xq() {
-			return getRuleContext(XqContext.class,0);
-		}
-		public ReturnXQContext(ReturnClauseContext ctx) { copyFrom(ctx); }
 		@Override
 		public void enterRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterReturnXQ(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).enterReturnClause(this);
 		}
 		@Override
 		public void exitRule(ParseTreeListener listener) {
-			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitReturnXQ(this);
+			if ( listener instanceof XQueryListener ) ((XQueryListener)listener).exitReturnClause(this);
 		}
 		@Override
 		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
-			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitReturnXQ(this);
+			if ( visitor instanceof XQueryVisitor ) return ((XQueryVisitor<? extends T>)visitor).visitReturnClause(this);
 			else return visitor.visitChildren(this);
 		}
 	}
@@ -1674,7 +1639,6 @@ public class XQueryParser extends Parser {
 		ReturnClauseContext _localctx = new ReturnClauseContext(_ctx, getState());
 		enterRule(_localctx, 16, RULE_returnClause);
 		try {
-			_localctx = new ReturnXQContext(_localctx);
 			enterOuterAlt(_localctx, 1);
 			{
 			setState(191);
