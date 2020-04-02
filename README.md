@@ -1,11 +1,11 @@
 # XQuery-Processor
-XQuery-Processor is a project for CSE232B at UCSD. It parses XQuery using Antlr and extracts corresponding data from XML documents.
+XQuery-Processor is a project for CSE232B at UCSD. It parses XQuery using Antlr and extracts data from XML documents.
 
 ## Build
 Use Maven to compile the project by executing the following command:
-
+```
 mvn compile
-
+```
 ## Usage
 Write XQuery in /test/XQueryTest.txt, and put XML documents in /test. Run the program, the result will be saved in /test/result.txt.
 
@@ -26,11 +26,12 @@ For example, run the following XQuery:
 ```
 
 the result will be:
-
-`<acts>`
+```
+<acts>
 
     <act>ACT IV</act>
   
     <act>ACT V</act>
   
-`</acts>`
+</acts>
+```
